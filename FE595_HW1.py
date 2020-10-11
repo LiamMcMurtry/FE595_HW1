@@ -8,12 +8,14 @@ import numpy as np
 import matplotlib.pyplot as plot
 
 def main():
+    #Here, the np.arange was adjusted to properly fit the different trigonometric graphs so that the presentation looked smooth.
     period1 = np.arange(0, 2*np.pi,0.01)
     period2 = np.arange(0,2*np.pi,0.02)
     period3 = np.arange(0,2*np.pi,0.05)
     sin = np.sin(period1)
     cos = np.cos(period2)
     tan = np.tan(period3)
+    #Here, the basic elements of a trigonometric graphs were written out.
     plot.plot(period1,sin,period2,cos,period3,tan)
     plot.ylim(-5,5)
     plot.xlim(0,6)
