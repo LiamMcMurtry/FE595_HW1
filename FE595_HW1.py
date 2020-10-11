@@ -1,31 +1,27 @@
-#!/usr/bin/env python
-# coding: utf-8
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep  9 10:21:15 2020
+@author: ryanfinegan
+"""
 
-# In[27]:
-
-
+#importing libraries needed for the first assignment 
 import numpy as np
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 
 def main():
-    #Here, the np.arange was adjusted to properly fit the different trigonometric graphs so that the presentation looked smooth.
-    period1 = np.arange(0, 2*np.pi,0.01)
-    period2 = np.arange(0,2*np.pi,0.02)
-    period3 = np.arange(0,2*np.pi,0.05)
-    sin = np.sin(period1)
-    cos = np.cos(period2)
-    tan = np.tan(period3)
-    #Here, the basic elements of a trigonometric graphs were written out.
-    plot.plot(period1,sin,period2,cos,period3,tan)
-    plot.ylim(-5,5)
-    plot.xlim(0,6)
-    plot.title("Sine, Cosine, and Tangent Graphs")
-    plot.legend(['Sine', 'Cosine','Tangent'])
-    plot.show()
+    #assignment said for one period which is 2 pi 
+    period = np.arange(0,2*np.pi,.01)
+    x = np.sin(period)
+    y = np.cos(period)
+    z = np.tan(period)
+    plt.plot(period,x,period,y,period,z)
+    # Adding ylim prevents the graph from being skewed as tangent values go to infinity
+    plt.ylim(-4, 4)
+    plt.show()
     
 if __name__ == '__main__':
     main()
-
 
 # In[ ]:
 
